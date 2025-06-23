@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Keep only one Font Awesome link -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- Header -->
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo" alt="Logo" />
+        <ul>
+          <li><a href="#header">My Profile</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#interest">Interest</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="tab-images">
+          <img src="images/user.jpg" alt="User Image" />
+          <p class="caption">
+            Lhea Mae Castillo, 23 y/old
+          </p>
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            I am Lhea Mae, a tech-savvy problem solver who enjoys animals and
+            coding. I like spending time with dogs and savoring the small
+            pleasures they provide when I don't have school. I'm passionate
+            about compassion and creativity, and I think that self-love can be
+            achieved by resilience, growth, and the unconditional joy that
+            animals provide us.
+          </p>
+          <div class="polaroid-collage">
+            <div class="polaroid">
+              <img src="images/rem1.jpg" alt="Image 1" />
+              <p class="caption">Fun Memories</p>
+            </div>
+            <div class="polaroid">
+              <img src="images/rem2.jpg" alt="Image 2" />
+              <p class="caption">Best Moments</p>
+            </div>
+            <div class="polaroid">
+              <img src="images/rem3.jpg" alt="Image 3" />
+              <p class="caption">Adventure Time</p>
+            </div>
+            <div class="polaroid">
+              <img src="images/rem4.jpg" alt="Image 4" />
+              <p class="caption">Unforgettable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#interest" class="btn">Next</a>
+    </div>
+  </div>
+
+  <!-- Interest Section -->
+  <div id="interest">
+    <div class="container">
+      <h1 class="sub-title">My Pets</h1>
+      <div class="interest-list">
+        <div style="text-align: center;">
+          <img src="images/pet1.jpg" alt="Pet1" />
+          <h1>Butotoy</h1>
+          <p style="font-size: 20px;">
+            My survivor dog, he was picked up in the river where the children were playing
+          </p>
+        </div>
+        <div style="text-align: center;">
+          <img src="images/pet2.jpg" alt="Pet2" />
+          <h1>Oreo</h1>
+          <p style="font-size: 20px;">
+            My awesome dog, he was adopted by my friend
+          </p>
+        </div>
+        <div style="text-align: center;">
+          <img src="images/pet3.jpg" alt="Pet3" />
+          <h1>Bunsai</h1>
+          <p style="font-size: 20px;">
+            My adorable dog, she is my dream dog that I worked hard for
+          </p>
+        </div>
+      </div>
+      <a href="#contact" class="btn">Next</a>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1>Contact Me</h1>
+          <p><i class="fas fa-paper-plane"></i> lheamaecastillo@gmail.com</p>
+          <p><i class="fas fa-phone-square-alt"></i> 09100505027</p>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+          <a href="#header" class="btn">Go to My Profile</a>
+        </div>
+        <div class="contact-right">
+          <form>
+            <input type="text" name="Name" placeholder="Your Name" required />
+            <input type="email" name="Email" placeholder="Your Email" required />
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>
+        Copyright © Lhea Mae. Made by Myself
+        <i class="fas fa-heart"></i>
+      </p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function opentab(tabname) {
+      let tablinks = document.getElementsByClassName("tab-links");
+      let tabcontents = document.getElementsByClassName("tab-contents");
+
+      for (let i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active-link");
+      }
+      for (let i = 0; i < tabcontents.length; i++) {
+        tabcontents[i].classList.remove("active-tab");
+      }
+
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+</body>
+</html>
